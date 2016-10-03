@@ -3,11 +3,6 @@ import json
 
 
 class CleverBot(object):
-    """
-    >>> import clever
-    >>> client = clever.CleverBot(user='...', key='...')
-    >>> client.query("Hi")
-    """
     def __init__(self, user, key, nick=None):
         self.user = user
         self.key = key
