@@ -1,6 +1,3 @@
-# This is code from https://github.com/bvanrijn/clever.
-# See there for updates.
-
 import requests
 import json
 
