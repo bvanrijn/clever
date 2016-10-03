@@ -1,3 +1,6 @@
+# This is code from https://github.com/bvanrijn/clever.
+# See there for updates.
+
 import requests
 import json
 
@@ -7,7 +10,7 @@ class CleverBot(object):
         self.user = user
         self.key = key
         self.nick = nick
-        
+
         body = {
             'user': user,
             'key': key,
@@ -15,7 +18,8 @@ class CleverBot(object):
         }
 
         requests.post('https://cleverbot.io/1.0/create', json=body)
-        
+
+
     def query(self, text=''):
         body = {
             'user': self.user,
@@ -30,4 +34,4 @@ class CleverBot(object):
         if r['status'] == 'success':
             return r['response']
         else:
-            return r['status']
+            return False
