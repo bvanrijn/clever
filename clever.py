@@ -1,3 +1,6 @@
+# This is code from https://github.com/bvanrijn/clever.
+# See there for updates.
+
 import requests
 import json
 
@@ -17,7 +20,7 @@ class CleverBot(object):
         requests.post('https://cleverbot.io/1.0/create', json=body)
 
 
-    def query(self, text=''):
+    def query(self, text):
         body = {
             'user': self.user,
             'key': self.key,
